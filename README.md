@@ -63,7 +63,7 @@ Let's start with setting up an editor, most of existing editors are from 2009 an
 
 Open the server folder as the `Project Folder`. You need to install Syntax and Build System for Pawn.
 
-(Pawn Syntax)[https://packagecontrol.io/packages/Pawn%20syntax], download it from `Package Control` like said on the website.
+[Pawn Syntax](https://packagecontrol.io/packages/Pawn%20syntax), download it from `Package Control` like said on the website.
 
 Now, create a new `Build System` (`Tools > Build System > New Build System...`) and paste the following there:
 ```json
