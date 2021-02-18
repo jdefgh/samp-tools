@@ -77,6 +77,8 @@ Save it as SA-MP.sublime-build in User Packages folder
 
 Edit `gamemodes/grandlarc.pwn` and `filterscripts/my_filterscript.pwn`, for now that's all. Goodbye.
 
+Contribute please :)
+
 ## Useful links
 
 * [Unofficial SA-MP Docs](https://open.mp/docs "open.mp") - The official ones are lost but these are better anyway.
