@@ -8,7 +8,7 @@ I'm assuming you have SA-MP client installed but if you don't, you just need to 
 * If you're using steam version, keep in mind that the executable needs to be named `gta_sa.exe` and not `gta-sa.exe`.
 
 Getting back to the server, first thing you need to do is edit the config file. The config file looks like this:
-```
+```cfg
 echo Executing Server Config...
 lanmode 0
 rcon_password changeme
@@ -54,8 +54,30 @@ language English - Hmm... What could it be...
 
 ## Scripting
 
-Hold on, i have to save changes
+Let's start with setting up an editor, most of existing editors are from 2009 and look like Windows 98. List of example editors:
+* Pawno - You can find it in the `pawno` folder of the server, the startup error is harmless, but it says a lot about it, not recommended.
+* [QuickPawn](https://www.em-creations.co.uk/projects/quickpawn/ "EM-Creations") - Similar to Pawno, but a bit better, I used it for a long time until i switched to the one below.
+* [Sublime Text](https://www.sublimetext.com/3 "Sublime Text 3") - An universal hackable editor, the most modern one. That's the one that we'll be using.
+
+### Setting Up Sublime Text 3
+
+Open the server folder as the `Project Folder`. You need to install Syntax and Build System for Pawn.
+
+(Pawn Syntax)[https://packagecontrol.io/packages/Pawn%20syntax], download it from `Package Control` like said on the website.
+
+Now, create a new `Build System` (`Tools > Build System > New Build System...`) and paste the following there:
+```json
+{
+    "shell_cmd": "\"../pawno/pawncc\" \"$file\" -i=\"../include\" -o=\"$file_base_name\"",
+    "selector": "source.p",
+    "file_patterns": ["*.p", "*.pwn", "*.pawn"]
+}
+```
+Save it as SA-MP.sublime-build in User Packages folder
+
+Edit `gamemodes/grandlarc.pwn` and `filterscripts/my_filterscript.pwn`, for now that's all. Goodbye.
 
 ## Useful links
 
 * [Unofficial SA-MP Docs](https://open.mp/docs "open.mp") - The official ones are lost but these are better anyway.
+* [Useful links according to open.mp](https://open.mp/docs/awesome "open.mp")
